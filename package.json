@@ -1,0 +1,18 @@
+{
+  "name": "com.outsystems.plugins.fileviewer",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {},
+  "scripts": {
+    "i": "pnpm --dir ./packages/cordova-plugin i && pnpm --dir ./packages/outsystems-wrapper i",
+    "build": "pnpm --dir ./packages/cordova-plugin build && pnpm --dir ./packages/outsystems-wrapper build",
+    "update:tag": "node ./scripts/change-extensibility.js",
+    "update:version": "node ./scripts/tag-applications-o11.js",
+    "deploy": "node ./scripts/deploy.js",
+    "download": "node ./scripts/download.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.8",
+    "typescript": "~5.4.5"
+  }
+}
