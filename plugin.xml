@@ -20,8 +20,11 @@
             <preference name="AndroidXEnabled" value="true"/>
         </config-file>
 
+        <source-file src="packages/cordova-plugin/android/OSFileViewerErrors.kt" target-dir="app/src/main/kotlin/com/outsystems/plugins/fileviewer" />
         <source-file src="packages/cordova-plugin/android/OSFileViewerPlugin.kt" target-dir="app/src/main/kotlin/com/outsystems/plugins/fileviewer" />
 
+        <!-- TODO the .aar will be removed once native Android lib is published on maven -->
+        <source-file src="packages/cordova-plugin/android/libs/IONFileViewerLib-debug.aar" target-dir="app/libs" />
         <framework src="packages/cordova-plugin/android/build.gradle" custom="true" type="gradleReference" />
 
     </platform>
