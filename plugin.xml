@@ -38,7 +38,19 @@
             <preference name="SwiftVersion" value="5" />
         </config-file>
 
+        <source-file src="packages/cordova-plugin/ios/OSFileViewerError.swift" />
         <source-file src="packages/cordova-plugin/ios/OSFileViewerPlugin.swift" />
+
+        <framework src="packages/cordova-plugin/ios/IONFileViewerLib.xcframework" embed="true" custom="true" />
+
+        <!--podspec>
+            <config>
+                <source url="https://cdn.cocoapods.org/"/>
+            </config>
+            <pods use-frameworks="true">
+                <pod name="IONFileViewerLib" spec="1.0.0" />
+            </pods>
+        </podspec--> 
     
     </platform>
 </plugin>
