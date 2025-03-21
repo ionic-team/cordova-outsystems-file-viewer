@@ -4,9 +4,9 @@ enum OSFileViewerError: Error {
     case pathEmpty
     case urlEmpty
     case couldNotOpenDocument
+    case bridgeNotInitialised
     case downloadFailed
     case missingFileExtension
-    case bridgeNotInitialised
     
     func toDictionary() -> [String: String] {
             [
@@ -22,11 +22,11 @@ private extension OSFileViewerError {
         case .fileDoesNotExist: 4
         case .urlMalformed: 5
         case .pathEmpty: 6
-        case .urlEmpty: 9
-        case .couldNotOpenDocument: 12
-        case .downloadFailed: 13
-        case .missingFileExtension: 14
-        case .bridgeNotInitialised: 15
+        case .urlEmpty: 7
+        case .couldNotOpenDocument: 8
+        case .bridgeNotInitialised: 11
+        case .downloadFailed: 12
+        case .missingFileExtension: 13
         }
     }
 

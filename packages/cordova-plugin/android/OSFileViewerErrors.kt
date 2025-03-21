@@ -37,25 +37,25 @@ object OSFileViewerErrors {
         message = "Path of the file to open is either null or empty."
     )
 
-    val invalidParameters: ErrorInfo = ErrorInfo(
-        code = formatErrorCode(7),
-        message = "Invalid parameters."
-    )
-
-    val noAppToOpen = ErrorInfo(
-        code = formatErrorCode(8),
-        message = "There is no app to open this document."
-    )
-
     val urlEmpty = ErrorInfo(
-        code = formatErrorCode(9),
+        code = formatErrorCode(7),
         message = "URL to open is either null or empty."
     )
 
     // TODO confirm this error code
     val genericError = ErrorInfo(
-        code = formatErrorCode(12),
+        code = formatErrorCode(8),
         message = "Could not open the document."
+    )
+
+    val invalidParameters: ErrorInfo = ErrorInfo(
+        code = formatErrorCode(0),
+        message = "Invalid parameters."
+    )
+
+    val noAppToOpen = ErrorInfo(
+        code = formatErrorCode(10),
+        message = "There is no app to open this document."
     )
 }
 
@@ -63,7 +63,7 @@ fun Throwable.toOSFileViewerError(): OSFileViewerErrors.ErrorInfo = when (this) 
     is IONFLVWException.FileDoesNotExist -> OSFileViewerErrors.fileDoesNotExist
     is IONFLVWException.InvalidURL -> OSFileViewerErrors.urlMalformed(url)
     is IONFLVWException.InvalidPath -> OSFileViewerErrors.filePathInvalid(path)
-    is IONFLVWException.NoApp -> OSFileViewerErrors.noAppToOpen
     is IONFLVWException.EmptyURL -> OSFileViewerErrors.urlEmpty
+    is IONFLVWException.NoApp -> OSFileViewerErrors.noAppToOpen
     else -> OSFileViewerErrors.genericError
 }
