@@ -42,7 +42,6 @@ object OSFileViewerErrors {
         message = "URL to open is either null or empty."
     )
 
-    // TODO confirm this error code
     val genericError = ErrorInfo(
         code = formatErrorCode(8),
         message = "Could not open the document."
