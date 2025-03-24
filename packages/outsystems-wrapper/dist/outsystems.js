@@ -54,7 +54,7 @@
       }
     }
     checkValidResourcePath(path, error) {
-      if (!path.includes("resources/")) {
+      if (!path.startsWith("resources/")) {
         error({
           code: "OS-PLUG-FLVW-0007",
           message: "Invalid parameters."

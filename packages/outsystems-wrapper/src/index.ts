@@ -85,7 +85,7 @@ class OSFileViewerWrapper {
     }
 
     private checkValidResourcePath(path: string, error: (error: PluginError) => void): boolean {
-        if (!path.includes('resources/')) {
+        if (!path.startsWith('resources/')) {
             // plugin only supports resources/ directory by design
             //  to not be able access to any app resource in any location
             error({
