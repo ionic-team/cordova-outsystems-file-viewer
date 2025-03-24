@@ -54,7 +54,7 @@ class OSFileViewerWrapper {
   checkValidResourcePath(path, error) {
     if (!path.startsWith("resources/")) {
       error({
-        code: "OS-PLUG-FLVW-0007",
+        code: "OS-PLUG-FLVW-0009",
         message: "Invalid parameters."
       });
       return false;

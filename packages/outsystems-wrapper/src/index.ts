@@ -89,7 +89,7 @@ class OSFileViewerWrapper {
             // plugin only supports resources/ directory by design
             //  to not be able access to any app resource in any location
             error({
-                code: 'OS-PLUG-FLVW-0007',
+                code: 'OS-PLUG-FLVW-0009',
                 message: 'Invalid parameters.'
             })
             return false

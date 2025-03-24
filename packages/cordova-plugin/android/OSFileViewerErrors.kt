@@ -48,7 +48,7 @@ object OSFileViewerErrors {
     )
 
     val invalidParameters: ErrorInfo = ErrorInfo(
-        code = formatErrorCode(0),
+        code = formatErrorCode(9),
         message = "Invalid parameters."
     )
 
