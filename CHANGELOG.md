@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### 2025-03-18
+### 2025-03-21
 
-- Feat: 
+- Feat: Implement plugin methods: `openDocumentFromLocalPath`, `openDocumentFromResources`, `openDocumentFromUrl`, `previewMediaContentFromLocalPath`, `previewMediaContentFromResources`, `previewMediaContentFromUrl`.
+- Feat: Add outsystems-wrapper block.
