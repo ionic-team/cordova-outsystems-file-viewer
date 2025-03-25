@@ -8,7 +8,7 @@ class OSFileViewerWrapper {
             CapacitorUtils.Synapse.FileViewer.openDocumentFromLocalPath(options, success, error)
         } else {
             // @ts-ignore
-            Capacitor.Plugins.Geolocation.openDocumentFromLocalPath(options)
+            Capacitor.Plugins.FileViewer.openDocumentFromLocalPath(options)
                 .then(success)
                 .catch(error);
         }
@@ -25,7 +25,7 @@ class OSFileViewerWrapper {
             CapacitorUtils.Synapse.FileViewer.openDocumentFromResources(options, success, error)
         } else {
             // @ts-ignore
-            Capacitor.Plugins.Geolocation.openDocumentFromResources(options)
+            Capacitor.Plugins.FileViewer.openDocumentFromResources(options)
                 .then(success)
                 .catch(error);
         }
@@ -37,7 +37,7 @@ class OSFileViewerWrapper {
             CapacitorUtils.Synapse.FileViewer.openDocumentFromUrl(options, success, error)
         } else {
             // @ts-ignore
-            Capacitor.Plugins.Geolocation.openDocumentFromUrl(options)
+            Capacitor.Plugins.FileViewer.openDocumentFromUrl(options)
                 .then(success)
                 .catch(error);
         }
@@ -49,7 +49,7 @@ class OSFileViewerWrapper {
             CapacitorUtils.Synapse.FileViewer.previewMediaContentFromLocalPath(options, success, error)
         } else {
             // @ts-ignore
-            Capacitor.Plugins.Geolocation.previewMediaContentFromLocalPath(options)
+            Capacitor.Plugins.FileViewer.previewMediaContentFromLocalPath(options)
                 .then(success)
                 .catch(error);
         }
@@ -66,7 +66,7 @@ class OSFileViewerWrapper {
             CapacitorUtils.Synapse.FileViewer.previewMediaContentFromResources(options, success, error)
         } else {
             // @ts-ignore
-            Capacitor.Plugins.Geolocation.previewMediaContentFromResources(options)
+            Capacitor.Plugins.FileViewer.previewMediaContentFromResources(options)
                 .then(success)
                 .catch(error);
         }
@@ -78,7 +78,7 @@ class OSFileViewerWrapper {
             CapacitorUtils.Synapse.FileViewer.previewMediaContentFromUrl(options, success, error)
         } else {
             // @ts-ignore
-            Capacitor.Plugins.Geolocation.previewMediaContentFromUrl(options)
+            Capacitor.Plugins.FileViewer.previewMediaContentFromUrl(options)
                 .then(success)
                 .catch(error);
         }

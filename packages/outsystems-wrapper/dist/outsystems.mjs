@@ -3,7 +3,7 @@ class OSFileViewerWrapper {
     if (this.isSynapseDefined()) {
       CapacitorUtils.Synapse.FileViewer.openDocumentFromLocalPath(options, success, error);
     } else {
-      Capacitor.Plugins.Geolocation.openDocumentFromLocalPath(options).then(success).catch(error);
+      Capacitor.Plugins.FileViewer.openDocumentFromLocalPath(options).then(success).catch(error);
     }
   }
   openDocumentFromResources(options, success, error) {
@@ -14,21 +14,21 @@ class OSFileViewerWrapper {
     if (this.isSynapseDefined()) {
       CapacitorUtils.Synapse.FileViewer.openDocumentFromResources(options, success, error);
     } else {
-      Capacitor.Plugins.Geolocation.openDocumentFromResources(options).then(success).catch(error);
+      Capacitor.Plugins.FileViewer.openDocumentFromResources(options).then(success).catch(error);
     }
   }
   openDocumentFromUrl(options, success, error) {
     if (this.isSynapseDefined()) {
       CapacitorUtils.Synapse.FileViewer.openDocumentFromUrl(options, success, error);
     } else {
-      Capacitor.Plugins.Geolocation.openDocumentFromUrl(options).then(success).catch(error);
+      Capacitor.Plugins.FileViewer.openDocumentFromUrl(options).then(success).catch(error);
     }
   }
   previewMediaContentFromLocalPath(options, success, error) {
     if (this.isSynapseDefined()) {
       CapacitorUtils.Synapse.FileViewer.previewMediaContentFromLocalPath(options, success, error);
     } else {
-      Capacitor.Plugins.Geolocation.previewMediaContentFromLocalPath(options).then(success).catch(error);
+      Capacitor.Plugins.FileViewer.previewMediaContentFromLocalPath(options).then(success).catch(error);
     }
   }
   previewMediaContentFromResources(options, success, error) {
@@ -39,14 +39,14 @@ class OSFileViewerWrapper {
     if (this.isSynapseDefined()) {
       CapacitorUtils.Synapse.FileViewer.previewMediaContentFromResources(options, success, error);
     } else {
-      Capacitor.Plugins.Geolocation.previewMediaContentFromResources(options).then(success).catch(error);
+      Capacitor.Plugins.FileViewer.previewMediaContentFromResources(options).then(success).catch(error);
     }
   }
   previewMediaContentFromUrl(options, success, error) {
     if (this.isSynapseDefined()) {
       CapacitorUtils.Synapse.FileViewer.previewMediaContentFromUrl(options, success, error);
     } else {
-      Capacitor.Plugins.Geolocation.previewMediaContentFromUrl(options).then(success).catch(error);
+      Capacitor.Plugins.FileViewer.previewMediaContentFromUrl(options).then(success).catch(error);
     }
   }
   checkValidResourcePath(path, error) {
