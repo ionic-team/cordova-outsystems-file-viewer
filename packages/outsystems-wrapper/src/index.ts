@@ -127,7 +127,7 @@ class OSFileViewerWrapper {
      */
     private isSynapseDefined(): boolean {
         // @ts-ignore
-        return typeof (CapacitorUtils) !== "undefined"
+        return typeof (CapacitorUtils) !== "undefined" && typeof (CapacitorUtils.Synapse) !== "undefined" && typeof (CapacitorUtils.Synapse.FileViewer) !== "undefined"
     }
 }
 

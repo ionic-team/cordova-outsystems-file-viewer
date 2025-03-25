@@ -88,7 +88,7 @@
      * @returns true if synapse is defined, false otherwise
      */
     isSynapseDefined() {
-      return typeof CapacitorUtils !== "undefined";
+      return typeof CapacitorUtils !== "undefined" && typeof CapacitorUtils.Synapse !== "undefined" && typeof CapacitorUtils.Synapse.FileViewer !== "undefined";
     }
   }
   const Instance = new OSFileViewerWrapper();
