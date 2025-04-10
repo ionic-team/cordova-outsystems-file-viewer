@@ -16,8 +16,7 @@ allprojects {
 }
 
 dependencies{
-    // TODO to be replaced with io.ionic.libs:ionfileviewer-android@aar once it's published on maven
-    implementation(files("libs/IONFileViewerLib-debug.aar"))
+    implementation("io.ionic.libs:ionfileviewer-android:1.0.0")
 
     implementation("com.github.outsystems:oscore-android:1.2.0@aar")
     implementation("com.github.outsystems:oscordova-android:2.0.1@aar")
