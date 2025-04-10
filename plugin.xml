@@ -23,8 +23,6 @@
         <source-file src="packages/cordova-plugin/android/OSFileViewerErrors.kt" target-dir="app/src/main/kotlin/com/outsystems/plugins/fileviewer" />
         <source-file src="packages/cordova-plugin/android/OSFileViewerPlugin.kt" target-dir="app/src/main/kotlin/com/outsystems/plugins/fileviewer" />
 
-        <!-- TODO the .aar will be removed once native Android lib is published on maven -->
-        <source-file src="packages/cordova-plugin/android/libs/IONFileViewerLib-debug.aar" target-dir="app/libs" />
         <framework src="packages/cordova-plugin/android/build.gradle" custom="true" type="gradleReference" />
 
     </platform>
@@ -41,16 +39,14 @@
         <source-file src="packages/cordova-plugin/ios/OSFileViewerError.swift" />
         <source-file src="packages/cordova-plugin/ios/OSFileViewerPlugin.swift" />
 
-        <framework src="packages/cordova-plugin/ios/IONFileViewerLib.xcframework" embed="true" custom="true" />
-
-        <!--podspec>
+        <podspec>
             <config>
                 <source url="https://cdn.cocoapods.org/"/>
             </config>
             <pods use-frameworks="true">
                 <pod name="IONFileViewerLib" spec="1.0.0" />
             </pods>
-        </podspec--> 
+        </podspec>
     
     </platform>
 </plugin>
