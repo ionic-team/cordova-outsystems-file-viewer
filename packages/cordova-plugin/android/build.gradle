@@ -16,7 +16,7 @@ allprojects {
 }
 
 dependencies{
-    implementation("io.ionic.libs:ionfileviewer-android:1.0.0@aar")
+    implementation("io.ionic.libs:ionfileviewer-android:1.0.1@aar")
 
     implementation("com.github.outsystems:oscore-android:1.2.0@aar")
     implementation("com.github.outsystems:oscordova-android:2.0.1@aar")
