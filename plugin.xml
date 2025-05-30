@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="com.outsystems.plugins.fileviewer" version="1.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="com.outsystems.plugins.fileviewer" version="1.0.2" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>OSFileViewerPlugin</name>
     <description>OutSystems' cordova file viewer plugin for mobile apps.</description>
     <author>OutSystems Inc</author>
@@ -44,7 +44,7 @@
                 <source url="https://cdn.cocoapods.org/"/>
             </config>
             <pods use-frameworks="true">
-                <pod name="IONFileViewerLib" spec="1.0.0" />
+                <pod name="IONFileViewerLib" spec="1.0.1" />
             </pods>
         </podspec>
     
