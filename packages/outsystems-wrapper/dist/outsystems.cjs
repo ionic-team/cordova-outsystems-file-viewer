@@ -5,7 +5,7 @@ class OSFileViewerWrapper {
     if (this.isCordovaPluginDefined()) {
       cordova.plugins.FileViewer.openDocumentFromLocalPath(options, success, error);
     } else {
-      Capacitor.Plugins.FileViewer.openDocumentFromLocalPath(options).then(success).catch(error);
+      window.CapacitorPlugins.FileViewer.openDocumentFromLocalPath(options).then(success).catch(error);
     }
   }
   openDocumentFromResources(options, success, error) {
@@ -16,21 +16,21 @@ class OSFileViewerWrapper {
     if (this.isCordovaPluginDefined()) {
       cordova.plugins.FileViewer.openDocumentFromResources(options, success, error);
     } else {
-      Capacitor.Plugins.FileViewer.openDocumentFromResources(options).then(success).catch(error);
+      window.CapacitorPlugins.FileViewer.openDocumentFromResources(options).then(success).catch(error);
     }
   }
   openDocumentFromUrl(options, success, error) {
     if (this.isCordovaPluginDefined()) {
       cordova.plugins.FileViewer.openDocumentFromUrl(options, success, error);
     } else {
-      Capacitor.Plugins.FileViewer.openDocumentFromUrl(options).then(success).catch(error);
+      window.CapacitorPlugins.FileViewer.openDocumentFromUrl(options).then(success).catch(error);
     }
   }
   previewMediaContentFromLocalPath(options, success, error) {
     if (this.isCordovaPluginDefined()) {
       cordova.plugins.FileViewer.previewMediaContentFromLocalPath(options, success, error);
     } else {
-      Capacitor.Plugins.FileViewer.previewMediaContentFromLocalPath(options).then(success).catch(error);
+      window.CapacitorPlugins.FileViewer.previewMediaContentFromLocalPath(options).then(success).catch(error);
     }
   }
   previewMediaContentFromResources(options, success, error) {
@@ -41,14 +41,14 @@ class OSFileViewerWrapper {
     if (this.isCordovaPluginDefined()) {
       cordova.plugins.FileViewer.previewMediaContentFromResources(options, success, error);
     } else {
-      Capacitor.Plugins.FileViewer.previewMediaContentFromResources(options).then(success).catch(error);
+      window.CapacitorPlugins.FileViewer.previewMediaContentFromResources(options).then(success).catch(error);
     }
   }
   previewMediaContentFromUrl(options, success, error) {
     if (this.isCordovaPluginDefined()) {
       cordova.plugins.FileViewer.previewMediaContentFromUrl(options, success, error);
     } else {
-      Capacitor.Plugins.FileViewer.previewMediaContentFromUrl(options).then(success).catch(error);
+      window.CapacitorPlugins.FileViewer.previewMediaContentFromUrl(options).then(success).catch(error);
     }
   }
   checkValidResourcePath(path, error) {

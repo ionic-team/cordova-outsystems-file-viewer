@@ -8,7 +8,7 @@ class OSFileViewerWrapper {
             cordova.plugins.FileViewer.openDocumentFromLocalPath(options, success, error)
         } else {
             // @ts-ignore
-            Capacitor.Plugins.FileViewer.openDocumentFromLocalPath(options)
+            window.CapacitorPlugins.FileViewer.openDocumentFromLocalPath(options)
                 .then(success)
                 .catch(error);
         }
@@ -25,7 +25,7 @@ class OSFileViewerWrapper {
             cordova.plugins.FileViewer.openDocumentFromResources(options, success, error)
         } else {
             // @ts-ignore
-            Capacitor.Plugins.FileViewer.openDocumentFromResources(options)
+            window.CapacitorPlugins.FileViewer.openDocumentFromResources(options)
                 .then(success)
                 .catch(error);
         }
@@ -37,7 +37,7 @@ class OSFileViewerWrapper {
             cordova.plugins.FileViewer.openDocumentFromUrl(options, success, error)
         } else {
             // @ts-ignore
-            Capacitor.Plugins.FileViewer.openDocumentFromUrl(options)
+            window.CapacitorPlugins.FileViewer.openDocumentFromUrl(options)
                 .then(success)
                 .catch(error);
         }
@@ -49,7 +49,7 @@ class OSFileViewerWrapper {
             cordova.plugins.FileViewer.previewMediaContentFromLocalPath(options, success, error)
         } else {
             // @ts-ignore
-            Capacitor.Plugins.FileViewer.previewMediaContentFromLocalPath(options)
+            window.CapacitorPlugins.FileViewer.previewMediaContentFromLocalPath(options)
                 .then(success)
                 .catch(error);
         }
@@ -66,7 +66,7 @@ class OSFileViewerWrapper {
             cordova.plugins.FileViewer.previewMediaContentFromResources(options, success, error)
         } else {
             // @ts-ignore
-            Capacitor.Plugins.FileViewer.previewMediaContentFromResources(options)
+            window.CapacitorPlugins.FileViewer.previewMediaContentFromResources(options)
                 .then(success)
                 .catch(error);
         }
@@ -78,7 +78,7 @@ class OSFileViewerWrapper {
             cordova.plugins.FileViewer.previewMediaContentFromUrl(options, success, error)
         } else {
             // @ts-ignore
-            Capacitor.Plugins.FileViewer.previewMediaContentFromUrl(options)
+            window.CapacitorPlugins.FileViewer.previewMediaContentFromUrl(options)
                 .then(success)
                 .catch(error);
         }
