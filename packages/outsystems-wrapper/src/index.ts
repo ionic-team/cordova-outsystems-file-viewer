@@ -3,12 +3,12 @@ import { OpenFromLocalPathOptions, OpenFromResourcesOptions, OpenFromUrlOptions,
 class OSFileViewerWrapper {
 
     openDocumentFromLocalPath(options: OpenFromLocalPathOptions, success: () => void, error: (error: PluginError) => void): void {
-        if (this.isSynapseDefined()) {
+        if (this.isCordovaPluginDefined()) {
             // @ts-ignore
-            CapacitorUtils.Synapse.FileViewer.openDocumentFromLocalPath(options, success, error)
+            cordova.plugins.FileViewer.openDocumentFromLocalPath(options, success, error)
         } else {
             // @ts-ignore
-            Capacitor.Plugins.FileViewer.openDocumentFromLocalPath(options)
+            window.CapacitorPlugins.FileViewer.openDocumentFromLocalPath(options)
                 .then(success)
                 .catch(error);
         }
@@ -20,36 +20,36 @@ class OSFileViewerWrapper {
         }
         options.path = this.mapResourcePath(options.path)
 
-        if (this.isSynapseDefined()) {
+        if (this.isCordovaPluginDefined()) {
             // @ts-ignore
-            CapacitorUtils.Synapse.FileViewer.openDocumentFromResources(options, success, error)
+            cordova.plugins.FileViewer.openDocumentFromResources(options, success, error)
         } else {
             // @ts-ignore
-            Capacitor.Plugins.FileViewer.openDocumentFromResources(options)
+            window.CapacitorPlugins.FileViewer.openDocumentFromResources(options)
                 .then(success)
                 .catch(error);
         }
     }
     
     openDocumentFromUrl(options: OpenFromUrlOptions, success: () => void, error: (error: PluginError) => void): void {
-        if (this.isSynapseDefined()) {
+        if (this.isCordovaPluginDefined()) {
             // @ts-ignore
-            CapacitorUtils.Synapse.FileViewer.openDocumentFromUrl(options, success, error)
+            cordova.plugins.FileViewer.openDocumentFromUrl(options, success, error)
         } else {
             // @ts-ignore
-            Capacitor.Plugins.FileViewer.openDocumentFromUrl(options)
+            window.CapacitorPlugins.FileViewer.openDocumentFromUrl(options)
                 .then(success)
                 .catch(error);
         }
     }
     
     previewMediaContentFromLocalPath(options: PreviewMediaFromLocalPathOptions, success: () => void, error: (error: PluginError) => void): void {
-        if (this.isSynapseDefined()) {
+        if (this.isCordovaPluginDefined()) {
             // @ts-ignore
-            CapacitorUtils.Synapse.FileViewer.previewMediaContentFromLocalPath(options, success, error)
+            cordova.plugins.FileViewer.previewMediaContentFromLocalPath(options, success, error)
         } else {
             // @ts-ignore
-            Capacitor.Plugins.FileViewer.previewMediaContentFromLocalPath(options)
+            window.CapacitorPlugins.FileViewer.previewMediaContentFromLocalPath(options)
                 .then(success)
                 .catch(error);
         }
@@ -61,24 +61,24 @@ class OSFileViewerWrapper {
         }
         options.path = this.mapResourcePath(options.path)
 
-        if (this.isSynapseDefined()) {
+        if (this.isCordovaPluginDefined()) {
             // @ts-ignore
-            CapacitorUtils.Synapse.FileViewer.previewMediaContentFromResources(options, success, error)
+            cordova.plugins.FileViewer.previewMediaContentFromResources(options, success, error)
         } else {
             // @ts-ignore
-            Capacitor.Plugins.FileViewer.previewMediaContentFromResources(options)
+            window.CapacitorPlugins.FileViewer.previewMediaContentFromResources(options)
                 .then(success)
                 .catch(error);
         }
     }
     
     previewMediaContentFromUrl(options: PreviewMediaFromUrlOptions, success: () => void, error: (error: PluginError) => void): void {
-        if (this.isSynapseDefined()) {
+        if (this.isCordovaPluginDefined()) {
             // @ts-ignore
-            CapacitorUtils.Synapse.FileViewer.previewMediaContentFromUrl(options, success, error)
+            cordova.plugins.FileViewer.previewMediaContentFromUrl(options, success, error)
         } else {
             // @ts-ignore
-            Capacitor.Plugins.FileViewer.previewMediaContentFromUrl(options)
+            window.CapacitorPlugins.FileViewer.previewMediaContentFromUrl(options)
                 .then(success)
                 .catch(error);
         }
@@ -120,14 +120,9 @@ class OSFileViewerWrapper {
         return typeof (Capacitor) !== "undefined"
     }
 
-    /**
-     * Check that is required because MABS 12 isnt installing synapse dependency for capacitor plugins.
-     * Once MABS 12 no longer has that limitation, this can be removed.
-     * @returns true if synapse is defined, false otherwise
-     */
-    private isSynapseDefined(): boolean {
+    private isCordovaPluginDefined(): boolean {
         // @ts-ignore
-        return typeof (CapacitorUtils) !== "undefined" && typeof (CapacitorUtils.Synapse) !== "undefined" && typeof (CapacitorUtils.Synapse.FileViewer) !== "undefined"
+        return typeof(cordova) !== "undefined" && typeof(cordova.plugins) !== "undefined" && typeof(cordova.plugins.FileViewer) !== "undefined";
     }
 }
 

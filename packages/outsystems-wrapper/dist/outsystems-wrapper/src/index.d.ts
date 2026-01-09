@@ -12,12 +12,7 @@ declare class OSFileViewerWrapper {
      * @returns true if app is running in a capacitor shell (MABS 12), false otherwise (cordova)
      */
     private isCapacitorShell;
-    /**
-     * Check that is required because MABS 12 isnt installing synapse dependency for capacitor plugins.
-     * Once MABS 12 no longer has that limitation, this can be removed.
-     * @returns true if synapse is defined, false otherwise
-     */
-    private isSynapseDefined;
+    private isCordovaPluginDefined;
 }
 export declare const Instance: OSFileViewerWrapper;
 export {};

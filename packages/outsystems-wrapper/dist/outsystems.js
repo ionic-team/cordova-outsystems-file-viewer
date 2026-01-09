@@ -4,10 +4,10 @@
   "use strict";
   class OSFileViewerWrapper {
     openDocumentFromLocalPath(options, success, error) {
-      if (this.isSynapseDefined()) {
-        CapacitorUtils.Synapse.FileViewer.openDocumentFromLocalPath(options, success, error);
+      if (this.isCordovaPluginDefined()) {
+        cordova.plugins.FileViewer.openDocumentFromLocalPath(options, success, error);
       } else {
-        Capacitor.Plugins.FileViewer.openDocumentFromLocalPath(options).then(success).catch(error);
+        window.CapacitorPlugins.FileViewer.openDocumentFromLocalPath(options).then(success).catch(error);
       }
     }
     openDocumentFromResources(options, success, error) {
@@ -15,24 +15,24 @@
         return;
       }
       options.path = this.mapResourcePath(options.path);
-      if (this.isSynapseDefined()) {
-        CapacitorUtils.Synapse.FileViewer.openDocumentFromResources(options, success, error);
+      if (this.isCordovaPluginDefined()) {
+        cordova.plugins.FileViewer.openDocumentFromResources(options, success, error);
       } else {
-        Capacitor.Plugins.FileViewer.openDocumentFromResources(options).then(success).catch(error);
+        window.CapacitorPlugins.FileViewer.openDocumentFromResources(options).then(success).catch(error);
       }
     }
     openDocumentFromUrl(options, success, error) {
-      if (this.isSynapseDefined()) {
-        CapacitorUtils.Synapse.FileViewer.openDocumentFromUrl(options, success, error);
+      if (this.isCordovaPluginDefined()) {
+        cordova.plugins.FileViewer.openDocumentFromUrl(options, success, error);
       } else {
-        Capacitor.Plugins.FileViewer.openDocumentFromUrl(options).then(success).catch(error);
+        window.CapacitorPlugins.FileViewer.openDocumentFromUrl(options).then(success).catch(error);
       }
     }
     previewMediaContentFromLocalPath(options, success, error) {
-      if (this.isSynapseDefined()) {
-        CapacitorUtils.Synapse.FileViewer.previewMediaContentFromLocalPath(options, success, error);
+      if (this.isCordovaPluginDefined()) {
+        cordova.plugins.FileViewer.previewMediaContentFromLocalPath(options, success, error);
       } else {
-        Capacitor.Plugins.FileViewer.previewMediaContentFromLocalPath(options).then(success).catch(error);
+        window.CapacitorPlugins.FileViewer.previewMediaContentFromLocalPath(options).then(success).catch(error);
       }
     }
     previewMediaContentFromResources(options, success, error) {
@@ -40,17 +40,17 @@
         return;
       }
       options.path = this.mapResourcePath(options.path);
-      if (this.isSynapseDefined()) {
-        CapacitorUtils.Synapse.FileViewer.previewMediaContentFromResources(options, success, error);
+      if (this.isCordovaPluginDefined()) {
+        cordova.plugins.FileViewer.previewMediaContentFromResources(options, success, error);
       } else {
-        Capacitor.Plugins.FileViewer.previewMediaContentFromResources(options).then(success).catch(error);
+        window.CapacitorPlugins.FileViewer.previewMediaContentFromResources(options).then(success).catch(error);
       }
     }
     previewMediaContentFromUrl(options, success, error) {
-      if (this.isSynapseDefined()) {
-        CapacitorUtils.Synapse.FileViewer.previewMediaContentFromUrl(options, success, error);
+      if (this.isCordovaPluginDefined()) {
+        cordova.plugins.FileViewer.previewMediaContentFromUrl(options, success, error);
       } else {
-        Capacitor.Plugins.FileViewer.previewMediaContentFromUrl(options).then(success).catch(error);
+        window.CapacitorPlugins.FileViewer.previewMediaContentFromUrl(options).then(success).catch(error);
       }
     }
     checkValidResourcePath(path, error) {
@@ -82,13 +82,8 @@
     isCapacitorShell() {
       return typeof Capacitor !== "undefined";
     }
-    /**
-     * Check that is required because MABS 12 isnt installing synapse dependency for capacitor plugins.
-     * Once MABS 12 no longer has that limitation, this can be removed.
-     * @returns true if synapse is defined, false otherwise
-     */
-    isSynapseDefined() {
-      return typeof CapacitorUtils !== "undefined" && typeof CapacitorUtils.Synapse !== "undefined" && typeof CapacitorUtils.Synapse.FileViewer !== "undefined";
+    isCordovaPluginDefined() {
+      return typeof cordova !== "undefined" && typeof cordova.plugins !== "undefined" && typeof cordova.plugins.FileViewer !== "undefined";
     }
   }
   const Instance = new OSFileViewerWrapper();
