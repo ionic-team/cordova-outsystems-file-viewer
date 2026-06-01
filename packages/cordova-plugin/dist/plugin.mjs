@@ -1,27 +1,27 @@
-import { require as require2 } from "cordova";
+import { require as require$1 } from "cordova";
 function s(t) {
   t.CapacitorUtils.Synapse = new Proxy(
     {},
     {
-      get(e, o) {
+      get(e, n) {
         return new Proxy({}, {
-          get(w, r) {
-            return (c, p, n) => {
-              const i = t.Capacitor.Plugins[o];
+          get(w, o) {
+            return (c, p, r) => {
+              const i = t.Capacitor.Plugins[n];
               if (i === void 0) {
-                n(new Error(`Capacitor plugin ${o} not found`));
+                r(new Error(`Capacitor plugin ${n} not found`));
                 return;
               }
-              if (typeof i[r] != "function") {
-                n(new Error(`Method ${r} not found in Capacitor plugin ${o}`));
+              if (typeof i[o] != "function") {
+                r(new Error(`Method ${o} not found in Capacitor plugin ${n}`));
                 return;
               }
               (async () => {
                 try {
-                  const a = await i[r](c);
+                  const a = await i[o](c);
                   p(a);
                 } catch (a) {
-                  n(a);
+                  r(a);
                 }
               })();
             };
@@ -35,16 +35,16 @@ function u(t) {
   t.CapacitorUtils.Synapse = new Proxy(
     {},
     {
-      get(e, o) {
-        return t.cordova.plugins[o];
+      get(e, n) {
+        return t.cordova.plugins[n];
       }
     }
   );
 }
-function y(t = false) {
-  window.CapacitorUtils = window.CapacitorUtils || {}, window.Capacitor !== void 0 && !t ? s(window) : window.cordova !== void 0 && u(window);
+function f(t = false) {
+  typeof window > "u" || (window.CapacitorUtils = window.CapacitorUtils || {}, window.Capacitor !== void 0 && !t ? s(window) : window.cordova !== void 0 && u(window));
 }
-var exec = require2("cordova/exec");
+var exec = require$1("cordova/exec");
 function openDocumentFromLocalPath(options, success, error) {
   exec(success, error, "OSFileViewerPlugin", "openDocumentFromLocalPath", [options]);
 }
@@ -71,4 +71,4 @@ module.exports = {
   previewMediaContentFromResources,
   previewMediaContentFromUrl
 };
-y(true);
+f(true);
