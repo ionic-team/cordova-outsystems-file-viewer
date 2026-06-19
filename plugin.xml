@@ -1,52 +1,41 @@
-<?xml version='1.0' encoding='utf-8'?>
-<plugin id="com.outsystems.plugins.fileviewer" version="1.0.4" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<plugin id="com.outsystems.plugins.fileviewer" version="1.0.5" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>OSFileViewerPlugin</name>
     <description>OutSystems' cordova file viewer plugin for mobile apps.</description>
     <author>OutSystems Inc</author>
-
     <js-module name="FileViewer" src="packages/cordova-plugin/dist/plugin.js">
-        <clobbers target="cordova.plugins.FileViewer" />
+        <clobbers target="cordova.plugins.FileViewer"/>
     </js-module>
-
     <platform name="android">
-        
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="OSFileViewerPlugin">
-                <param name="android-package" value="com.outsystems.plugins.fileviewer.OSFileViewerPlugin" />
-                <param name="onload" value="true" />
+                <param name="android-package" value="com.outsystems.plugins.fileviewer.OSFileViewerPlugin"/>
+                <param name="onload" value="true"/>
             </feature>
-            <preference name="GradlePluginKotlinEnabled" value="true" />
-            <preference name="GradlePluginKotlinCodeStyle" value="official" />
+            <preference name="GradlePluginKotlinEnabled" value="true"/>
+            <preference name="GradlePluginKotlinCodeStyle" value="official"/>
             <preference name="AndroidXEnabled" value="true"/>
         </config-file>
-
-        <source-file src="packages/cordova-plugin/android/OSFileViewerErrors.kt" target-dir="app/src/main/kotlin/com/outsystems/plugins/fileviewer" />
-        <source-file src="packages/cordova-plugin/android/OSFileViewerPlugin.kt" target-dir="app/src/main/kotlin/com/outsystems/plugins/fileviewer" />
-
-        <framework src="packages/cordova-plugin/android/build.gradle" custom="true" type="gradleReference" />
-
+        <source-file src="packages/cordova-plugin/android/OSFileViewerErrors.kt" target-dir="app/src/main/kotlin/com/outsystems/plugins/fileviewer"/>
+        <source-file src="packages/cordova-plugin/android/OSFileViewerPlugin.kt" target-dir="app/src/main/kotlin/com/outsystems/plugins/fileviewer"/>
+        <framework src="packages/cordova-plugin/android/build.gradle" custom="true" type="gradleReference"/>
     </platform>
-
     <platform name="ios">
-
         <config-file parent="/*" target="config.xml">
             <feature name="OSFileViewerPlugin">
-                <param name="ios-package" value="OSFileViewerPlugin" />
+                <param name="ios-package" value="OSFileViewerPlugin"/>
             </feature>
-            <preference name="SwiftVersion" value="5" />
+            <preference name="SwiftVersion" value="5"/>
         </config-file>
-
-        <source-file src="packages/cordova-plugin/ios/OSFileViewerError.swift" />
-        <source-file src="packages/cordova-plugin/ios/OSFileViewerPlugin.swift" />
-
+        <source-file src="packages/cordova-plugin/ios/OSFileViewerError.swift"/>
+        <source-file src="packages/cordova-plugin/ios/OSFileViewerPlugin.swift"/>
         <podspec>
             <config>
                 <source url="https://cdn.cocoapods.org/"/>
             </config>
             <pods use-frameworks="true">
-                <pod name="IONFileViewerLib" spec="1.0.3" />
+                <pod name="IONFileViewerLib" spec="1.0.3"/>
             </pods>
         </podspec>
-    
     </platform>
 </plugin>
