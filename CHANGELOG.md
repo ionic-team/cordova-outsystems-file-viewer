@@ -1,3 +1,5 @@
+## [1.0.6](https://github.com/ionic-team/cordova-outsystems-file-viewer/compare/1.0.5...1.0.6) (2026-07-14)
+
 ## [1.0.5](https://github.com/ionic-team/cordova-outsystems-file-viewer/compare/1.0.4...1.0.5) (2026-06-19)
 
 ## [1.0.4]

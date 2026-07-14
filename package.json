@@ -1,6 +1,6 @@
 {
   "name": "com.outsystems.plugins.fileviewer",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "private": true,
   "dependencies": {},
   "scripts": {
