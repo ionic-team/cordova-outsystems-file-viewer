@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/ionic-team/cordova-outsystems-file-viewer/compare/1.0.6...1.0.7) (2026-08-28)
+
+
+### Bug Fixes
+
+* **outsystems-wrapper:** Allow legacy clobber in new methods ([#13](https://github.com/ionic-team/cordova-outsystems-file-viewer/issues/13)) ([1f4166f](https://github.com/ionic-team/cordova-outsystems-file-viewer/commit/1f4166f452fadeb11a1c7efb7e40d7b0ef43a1c1))
+
 ## [1.0.6](https://github.com/ionic-team/cordova-outsystems-file-viewer/compare/1.0.5...1.0.6) (2026-07-14)
 
 ## [1.0.5](https://github.com/ionic-team/cordova-outsystems-file-viewer/compare/1.0.4...1.0.5) (2026-06-19)
