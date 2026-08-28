@@ -9,10 +9,23 @@ declare class OSFileViewerWrapper {
     private checkValidResourcePath;
     private mapResourcePath;
     /**
+     * splits a validated "resources/..." path into the fileName/fileExtension pair
+     * expected by the old plugin's (pre-1.0.0 of this package) native resources API,
+     * which resolves the www/resources location itself instead of taking a full path
+     */
+    private splitResourcePath;
+    /**
      * @returns true if app is running in a capacitor shell (MABS 12), false otherwise (cordova)
      */
     private isCapacitorShell;
     private isCordovaPluginDefined;
+    /**
+     * @returns true if the native side is still running the old cordova-outsystems-fileviewer
+     * plugin (global `cordova.plugins.OSFileViewer`), e.g. after an OTA update ships this newer
+     * web wrapper on top of an app built with the previous native plugin
+     */
+    private isOldCordovaPluginDefined;
+    private isOldAndroidPlatform;
 }
 export declare const Instance: OSFileViewerWrapper;
 export {};
