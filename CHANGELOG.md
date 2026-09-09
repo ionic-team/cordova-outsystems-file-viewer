@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/ionic-team/cordova-outsystems-file-viewer/compare/1.1.0...1.1.1) (2026-09-09)
+
+
+### Bug Fixes
+
+* **ios:** openDocumentFromUrl when extension is unresolvable ([#15](https://github.com/ionic-team/cordova-outsystems-file-viewer/issues/15)) ([909ad27](https://github.com/ionic-team/cordova-outsystems-file-viewer/commit/909ad27ce7bb947a20fd96c12b99fc6a9966db06))
+
 # [1.1.0](https://github.com/ionic-team/cordova-outsystems-file-viewer/compare/1.0.7...1.1.0) (2026-09-09)
 
 
