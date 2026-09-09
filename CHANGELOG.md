@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/ionic-team/cordova-outsystems-file-viewer/compare/1.0.7...1.1.0) (2026-09-09)
+
+
+### Features
+
+* **ios:** add Swift Package Manager support ([#14](https://github.com/ionic-team/cordova-outsystems-file-viewer/issues/14)) ([8c04dd7](https://github.com/ionic-team/cordova-outsystems-file-viewer/commit/8c04dd76bd00f066f4338b993a3d2f7baff4cf57))
+
 ## [1.0.7](https://github.com/ionic-team/cordova-outsystems-file-viewer/compare/1.0.6...1.0.7) (2026-08-28)
 
 
