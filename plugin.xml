@@ -34,7 +34,7 @@
                 <source url="https://cdn.cocoapods.org/"/>
             </config>
             <pods use-frameworks="true">
-                <pod name="IONFileViewerLib" spec="1.0.3" nospm="true"/>
+                <pod name="IONFileViewerLib" spec="1.0.4" nospm="true"/>
             </pods>
         </podspec>
     </platform>
