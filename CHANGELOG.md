@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/ionic-team/cordova-outsystems-file-viewer/compare/1.1.1...1.1.2) (2026-09-18)
+
+
+### Bug Fixes
+
+* **ios:** bump IONFileViewerLib to 2.0.0 ([#16](https://github.com/ionic-team/cordova-outsystems-file-viewer/issues/16)) ([0785a5d](https://github.com/ionic-team/cordova-outsystems-file-viewer/commit/0785a5deef9113f067f0e368ab43f7279bb51f29))
+
 ## [1.1.1](https://github.com/ionic-team/cordova-outsystems-file-viewer/compare/1.1.0...1.1.1) (2026-09-09)
 
 
