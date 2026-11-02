@@ -19,6 +19,7 @@
         <source-file src="packages/cordova-plugin/android/OSFileViewerErrors.kt" target-dir="app/src/main/kotlin/com/outsystems/plugins/fileviewer"/>
         <source-file src="packages/cordova-plugin/android/OSFileViewerPlugin.kt" target-dir="app/src/main/kotlin/com/outsystems/plugins/fileviewer"/>
         <framework src="packages/cordova-plugin/android/build.gradle" custom="true" type="gradleReference"/>
+        <resource-file src="local-maven-ionfileviewer-android" target="local-maven-ionfileviewer-android"/>
     </platform>
     <platform name="ios" package="swift">
         <config-file parent="/*" target="config.xml">
